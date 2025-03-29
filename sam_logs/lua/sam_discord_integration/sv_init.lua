@@ -8,16 +8,9 @@ if SERVER then
     local Config = SAM_DISCORD_INTEGRATION.Config
     local Settings = Config.Settings
     print("+-----------------------------+")
-<<<<<<< HEAD
-    print("| SAM Discord Integration V1")
-    print("| BotName: " .. Config.BotName .. string.rep(" ", 17 - #Config.BotName))
-    print("| Language: " .. Config.Language .. string.rep(" ", 16 - #Config.Language))
-    print("| TimeZoneOffset: " .. Config.TimeZoneOffset .. string.rep(" ", 10 - #tostring(Config.TimeZoneOffset)))
-=======
     print("| SAM Discord Integration V1.1")
     print("| BotName: " .. Config.BotName .. string.rep(" ", 17 - #Config.BotName))
     print("| Language: " .. Config.Language .. string.rep(" ", 16 - #Config.Language))
->>>>>>> master
     print("| ShowPlayer: " .. tostring(Settings.ShowPlayer) .. string.rep(" ", 14 - #tostring(Settings.ShowPlayer)))
     print("| ShowStaff: " .. tostring(Settings.ShowStaff) .. string.rep(" ", 15 - #tostring(Settings.ShowStaff)))
     print("| ShowDuration: " .. tostring(Settings.ShowDuration) .. string.rep(" ", 12 - #tostring(Settings.ShowDuration)))
