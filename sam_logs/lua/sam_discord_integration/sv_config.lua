@@ -1,25 +1,13 @@
-<<<<<<< HEAD
--- Thank you for using this addon, feel free to modify, improve and publish it.
--- by @dekah2077
-
-=======
->>>>>>> master
 if not SAM_DISCORD_INTEGRATION then
     SAM_DISCORD_INTEGRATION = {}
 end
 
-<<<<<<< HEAD
--- Configuration for SAM Discord Integration
--- Edit these values to customize the addon
+-- Thank you for using this addon, feel free to modify, improve and publish it.
+-- by @dekah2077
+
 SAM_DISCORD_INTEGRATION.Config = {
     WebhookURL = "https://discord.com/api/webhooks/url",
     BotName = "SAM Logs",
-    TimeZoneOffset = -3, -- Argentina (UTC-3)
-=======
-SAM_DISCORD_INTEGRATION.Config = {
-    WebhookURL = "https://discord.com/api/webhooks/url",
-    BotName = "SAM Logs",
->>>>>>> master
     Colors = {
         Jail = 0xFFA500,
         Ban = 0xFF0000,
@@ -27,11 +15,7 @@ SAM_DISCORD_INTEGRATION.Config = {
         Kick = 0xFF4500,
         Gag = 0xFF69B4
     },
-<<<<<<< HEAD
-    Language = "en",
-=======
     Language = "es",
->>>>>>> master
     Languages = {
         en = {
             Title = "New Punishment: %s",
@@ -41,9 +25,6 @@ SAM_DISCORD_INTEGRATION.Config = {
             Duration = "Duration",
             Type = "Type",
             Reason = "Reason",
-<<<<<<< HEAD
-            Footer = "SteamID: %s"
-=======
             Footer = "SteamID: %s",
             Permanent = "Permanent",
             Second = "second",
@@ -58,7 +39,6 @@ SAM_DISCORD_INTEGRATION.Config = {
             Months = "months",
             Year = "year",
             Years = "years"
->>>>>>> master
         },
         es = {
             Title = "Nueva Sanción: %s",
@@ -68,9 +48,6 @@ SAM_DISCORD_INTEGRATION.Config = {
             Duration = "Duración",
             Type = "Sanción",
             Reason = "Razón",
-<<<<<<< HEAD
-            Footer = "SteamID: %s"
-=======
             Footer = "SteamID: %s",
             Permanent = "Permanente",
             Second = "segundo",
@@ -85,7 +62,6 @@ SAM_DISCORD_INTEGRATION.Config = {
             Months = "meses",
             Year = "año",
             Years = "años"
->>>>>>> master
         }
     },
     Settings = {
