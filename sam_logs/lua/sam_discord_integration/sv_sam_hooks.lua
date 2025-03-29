@@ -1,23 +1,40 @@
 local SendPunishmentEmbed = SAM_DISCORD_INTEGRATION.SendPunishmentEmbed
 local Config = SAM_DISCORD_INTEGRATION.Config
 
+<<<<<<< HEAD
 -- Converts duration vars to seconds (10m -> 600)
+=======
+>>>>>>> master
 local function ParseDuration(duration_str)
     if not duration_str or duration_str == "" then return 0 end
     local num = tonumber(duration_str:match("^(%d+)"))
     if not num then return 0 end
+<<<<<<< HEAD
     local unit = duration_str:lower():match("[smhdwmy]") or "m"
     if unit == "s" then return num
+=======
+    local unit = duration_str:lower():match("[smhdwmy]o?") or "m"
+    
+    if duration_str:lower():find("mo") then
+        return num * 2592000
+    elseif unit == "s" then return num
+>>>>>>> master
     elseif unit == "m" then return num * 60
     elseif unit == "h" then return num * 3600
     elseif unit == "d" then return num * 86400
     elseif unit == "w" then return num * 604800
+<<<<<<< HEAD
     elseif unit == "mo" then return num * 2592000
+=======
+>>>>>>> master
     elseif unit == "y" then return num * 31536000
     else return num * 60 end
 end
 
+<<<<<<< HEAD
 -- Resolves target input to SteamID and name
+=======
+>>>>>>> master
 local function ResolveTarget(target_str)
     if sam.is_steamid(target_str) then
         return target_str, target_str
@@ -40,6 +57,7 @@ end
 
 hook.Add("SAM.RanCommand", "SAMDiscordIntegration_PunishmentLogs", function(ply, cmd_name, args)
     local target_str = args[1]
+<<<<<<< HEAD
     local length, sanction_type, reason = ParseDuration(args[2]), nil, args[3] or "No reason provided"
 
     if cmd_name == "jail" then sanction_type = "Jail"
@@ -48,6 +66,24 @@ hook.Add("SAM.RanCommand", "SAMDiscordIntegration_PunishmentLogs", function(ply,
     elseif cmd_name == "kick" then sanction_type = "Kick" length = 0
     elseif cmd_name == "gag" then sanction_type = "Gag"
     else return end
+=======
+    local length, sanction_type, reason
+    
+    if cmd_name == "kick" then
+        sanction_type = "Kick"
+        length = 0
+        reason = args[2] or "No reason provided"
+    else
+        length = ParseDuration(args[2])
+        reason = args[3] or "No reason provided"
+        
+        if cmd_name == "jail" then sanction_type = "Jail"
+        elseif cmd_name == "ban" then sanction_type = "Ban"
+        elseif cmd_name == "mute" then sanction_type = "Mute"
+        elseif cmd_name == "gag" then sanction_type = "Gag"
+        else return end
+    end
+>>>>>>> master
 
     local steamid, target_name = ResolveTarget(target_str)
     if IsValid(ply) then
