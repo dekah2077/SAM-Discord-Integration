@@ -27,4 +27,4 @@ integrates SAM punishments with Discord.
 
 - If you find any errors, please let me know on Discord and I'll fix them right away.
 
-discord: dekah2077
+discord: overith
